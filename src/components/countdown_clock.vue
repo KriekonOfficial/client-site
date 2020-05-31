@@ -115,4 +115,29 @@ export default {
     margin: 10px 10px 2px 10px;
     text-align: center;
 }
+
+@media screen and (max-width: 628px)
+{
+	.text {
+		font-size: 15px;
+	}
+
+	.digit {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 406px)
+{
+	.block {
+		margin: 10px;
+	}
+	.text {
+		font-size: 12px;
+	}
+
+	.digit {
+		font-size: 30px;
+	}
+}
 </style>
