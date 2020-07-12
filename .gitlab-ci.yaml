@@ -1,0 +1,8 @@
+stages:
+	- deploy
+
+deploy:
+  script:
+    - "echo 'test'"
+  only:
+    - master
