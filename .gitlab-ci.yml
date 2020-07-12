@@ -4,6 +4,7 @@ stages:
 deploy:
   stage: deploy
   script:
-    - "echo 'hello' | sudo tee -a /home/sites/kriekon.com/frontend/hello.txt"
+    - "cd /home/sites/kriekon.com/frontend"
+    - "git pull"
   only:
     - master
