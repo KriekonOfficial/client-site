@@ -5,6 +5,6 @@ deploy:
   stage: deploy
   script:
     - "cd /home/sites/kriekon.com/frontend"
-    - "git pull"
+    - "sudo git pull"
   only:
     - master
