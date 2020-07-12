@@ -1,7 +1,8 @@
 stages:
-	- deploy
+  - deploy
 
 deploy:
+  stage: deploy
   script:
     - "echo 'test'"
   only:
