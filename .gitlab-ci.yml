@@ -19,6 +19,6 @@ deploy:
   stage: deploy
   script:
     - "sudo rm -rf /home/sites/kriekon.com/frontend/www.kriekon.com/*"
-    - "sudo cp -R /home/sites/kriekon.com/frontend/dist /home/sites/kriekon.com/frontend/www.kriekon.com"
+    - "sudo cp -R /home/sites/kriekon.com/frontend/dist/* /home/sites/kriekon.com/frontend/www.kriekon.com"
   only:
     - master
