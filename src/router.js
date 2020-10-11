@@ -12,36 +12,6 @@ export default new Router({
 			component: () => import('./views/Home.vue')
 		},
 		{
-			path: '/news',
-			name: 'news',
-			component: () => import('./views/News.vue')
-		},
-		{
-			path: '/games',
-			name: 'games',
-			component: () => import('./views/Games.vue')
-		},
-		{
-			path: '/blogs',
-			name: 'blogs',
-			component: () => import('./views/Blogs.vue')
-		},
-		{
-			path: '/forum',
-			name: 'forum',
-			component: () => import('./views/Forum.vue')
-		},
-		{
-			path: '/videos',
-			name: 'videos',
-			component: () => import('./views/Videos.vue')
-		},
-		{
-			path: '/stream',
-			name: 'stream',
-			component: () => import('./views/Stream.vue')
-		},
-		{
 			path: '/login',
 			name: 'login',
 			component: () => import('./views/Login.vue')
