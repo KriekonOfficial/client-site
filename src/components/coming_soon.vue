@@ -4,7 +4,7 @@
 			<div class="container" style="height:100%">
 				<div class="center-contents">
 					<h1 class="margin-20 center-text">Coming Soon</h1>
-					<countdownclock date="2020-12-24 08:15:00"></countdownclock>
+					<countdownclock date="2021-12-24 08:15:00"></countdownclock>
 				</div>
 			</div>
 		</videobg>
