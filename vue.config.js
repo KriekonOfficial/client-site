@@ -8,8 +8,9 @@ module.exports = {
 				poll: 1000
 			},
 			disableHostCheck: true,
-			port: 3000,
-			host: '192.168.33.10',
+			port: 80,
+			public: 'local.www.kriekon.com',
+			host: 'local.www.kriekon.com',
 			historyApiFallback: true
 		}
 	}
