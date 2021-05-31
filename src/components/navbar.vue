@@ -17,19 +17,6 @@
 
 <script>
 export default {
-	data ()
-	{
-		return {
-			user: this.$auth.user,
-			launched: true
-		}
-	},
-	methods: {
-		logout ()
-		{
-			this.$auth.logout()
-		}
-	}
 }
 </script>
 

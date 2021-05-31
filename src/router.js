@@ -1,37 +1,39 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createWebHistory, createRouter } from "vue-router";
 
-Vue.use(Router)
+const routes = [
+	{
+		path: '/',
+		name: 'Home',
+		component: () => import('@/views/Home.vue')
+	},
+	{
+		path: '/login',
+		name: 'Login',
+		component: () => import('@/views/Login.vue')
+	},
+	{
+		path: '/register',
+		name: 'Register',
+		component: () => import('@/views/Register.vue')
+	},
+	{
+		path: '/user',
+		name: 'User',
+		component: () => import('@/views/user/Index.vue'),
+		children:
+		[
+			{
+				path: 'p/:username',
+				component: () => import('@/views/user/Profile.vue')
+			}
+		]
+	}
+];
 
-export default new Router({
-	mode: 'history',
-	routes: [
-		{
-			path: '/',
-			name: 'home',
-			component: () => import('./views/Home.vue')
-		},
-		{
-			path: '/login',
-			name: 'login',
-			component: () => import('./views/Login.vue')
-		},
-		{
-			path: '/register',
-			name: 'register',
-			component: () => import('./views/Register.vue')
-		},
-		{
-			path: '/user',
-			name: 'user',
-			component: () => import('./views/user/Index.vue'),
-			children:
-			[
-				{
-					path: 'p/:username',
-					component: () => import('./views/user/Profile.vue')
-				}
-			]
-		}
-	]
-})
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
+
