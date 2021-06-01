@@ -30,7 +30,8 @@
 </template>
 
 <script>
-import auth from '../models/auth.js'
+import { Client } from '@/services/client'
+
 export default {
 	name: 'Login',
 	data ()
@@ -48,9 +49,8 @@ export default {
 				email: this.login_email,
 				password_64: btoa(this.login_password)
 			}
-			// We need to pass the component's this context
-			// to properly make use of http in the auth service
-			auth.login(this, credentials, 'user')
+			const client = new Client();
+			console.log(client);
 		}
 	}
 }
