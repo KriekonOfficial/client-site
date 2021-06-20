@@ -38,7 +38,7 @@ export class Client {
 
 	private generateURL(uri: string, params: any[] = []) : string {
 		let url = 'https://api.kriekon.com';
-		if (window.location.host === 'local.www.kriekon.com') {
+		if (process.env.NODE_ENV !== 'production') {
 			url = 'http://local.api.kriekon.com';
 		}
 		url += '/v' + this.version + '/' + uri;
