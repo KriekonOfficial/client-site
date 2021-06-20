@@ -1,7 +1,12 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex';
+import userStore from './modules/user';
 
-Vue.use(Vuex)
+const store = createStore({
+	strict: process.env.NODE_ENV !== 'production',
+	modules: {
+		user: userStore
+	}
+});
 
-export default new Vuex.Store({
-})
+export default store;
+
